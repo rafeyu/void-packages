@@ -1,0 +1,18 @@
+# Template file for 'clifm'
+pkgname=clifm
+version=1.2.2
+revision=1
+archs="i686 x86_64"
+wrksrc=clifm-${version}
+build_style=gnu-makefile
+makedepends="acl-devel libcap-devel readline-devel file-devel"
+short_desc="Command line interface file manager"
+maintainer="Ramdziana F Y <ramdzian@gmail.com>"
+license="GPL-2.0"
+homepage="https://github.com/leo-arch/clifm"
+distfiles="https://github.com/leo-arch/clifm/archive/refs/tags/v1.2.2.tar.gz"
+checksum=61574023e597a047ca8842fd5b3b8fd099b02be52f188acc41a23678bf4ac2e4
+
+pre_build (){
+	  sed -i 's/$(PREFIX)\/man/$(PREFIX)\/$(DATADIR)\/man/g' Makefile
+}

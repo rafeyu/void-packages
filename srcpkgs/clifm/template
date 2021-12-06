@@ -1,6 +1,6 @@
 # Template file for 'clifm'
 pkgname=clifm
-version=1.2.2
+version=1.3
 revision=1
 archs="i686 x86_64 aarch64 armv7hf"
 wrksrc=clifm-${version}
@@ -11,8 +11,8 @@ maintainer="Ramdziana F Y <ramdzian@gmail.com>"
 license="GPL-2.0"
 homepage="https://github.com/leo-arch/clifm"
 distfiles="https://github.com/leo-arch/clifm/archive/refs/tags/v${version}.tar.gz"
-checksum=61574023e597a047ca8842fd5b3b8fd099b02be52f188acc41a23678bf4ac2e4
+checksum=8418c71e90fe3b88b2e5b30eeadcb829574f99a9c90049e550a38f8c9e3f1076
 
 pre_build (){
-	  sed -i 's/$(PREFIX)\/man/$(PREFIX)\/$(DATADIR)\/man/g' Makefile
+	  vsed -i 's/$(PREFIX)\/man/$(PREFIX)\/$(DATADIR)\/man/g' Makefile
 }

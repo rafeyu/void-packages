@@ -14,5 +14,5 @@ distfiles="https://github.com/leo-arch/clifm/archive/refs/tags/v${version}.tar.g
 checksum=8418c71e90fe3b88b2e5b30eeadcb829574f99a9c90049e550a38f8c9e3f1076
 
 pre_build (){
-	  vsed -i 's/$(PREFIX)\/man/$(PREFIX)\/$(DATADIR)\/man/g' Makefile
+	  vsed -i 's/$(PREFIX)\/man/\/usr\/share\/man/g' Makefile
 }

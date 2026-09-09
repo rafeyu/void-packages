@@ -2,7 +2,7 @@
 # Permission to redistribute is granted.
 # see: srcpkgs/vivaldi/files/redistribution-permission.eml
 pkgname=vivaldi
-version=8.1.4087.75+1
+version=8.2.4133.47+1
 revision=1
 archs="x86_64 aarch64"
 depends="desktop-file-utils hicolor-icon-theme xz libnotify xdg-utils"
@@ -16,11 +16,11 @@ skiprdeps="/opt/vivaldi/libqt5_shim.so /opt/vivaldi/libqt6_shim.so"
 case "$XBPS_TARGET_MACHINE" in
 x86_64)
 	distfiles="https://downloads.vivaldi.com/stable/vivaldi-stable_${version//+/-}_amd64.deb"
-	checksum=9cb7cd076481dd9ecf4348115db7a0434243e911e27b611575092e34b2d4899c
+	checksum=4adec2f17c40d4f21e805d490d4a0f1d5f50fd406e7a62b37117cb42a58a5f6e
 	;;
 aarch64)
 	distfiles="https://downloads.vivaldi.com/stable/vivaldi-stable_${version//+/-}_arm64.deb"
-	checksum=3321a715b5978db0f94f31f3957c95d50835eddc7f3238cd5910d189eaa4b02c
+	checksum=a324bba7b07c93144f9742b15ee59006012120f90fdfabc8e8c34345f925ed46
 	;;
 *)
 	broken="No distfiles available for this target"
